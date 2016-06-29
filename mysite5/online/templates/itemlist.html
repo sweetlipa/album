@@ -1,0 +1,28 @@
+{% extends "./base.html" %}
+
+{% block title %}相册列表{% endblock %}
+
+{% block content %}
+
+<p><a href="{% url 'index' %}">&laquo; 返回首页</a></p>
+
+<h2>相册列表</h2>
+{% if items %}
+<table>
+    <tr>
+        <th>标题</th>
+        <th>描述</th>
+    </tr>
+    {% for item in items %}
+    <tr>
+        <td><i><a href="http://127.0.0.1:8000/online/photolist/">{{ item.name }}</a></i></td>
+        <td>{{ item.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>你还没有相册，请去首页新建一个属于你的相册吧。</p>
+{% endif %}
+
+{% endblock %}
+<!--itemlist.html-->

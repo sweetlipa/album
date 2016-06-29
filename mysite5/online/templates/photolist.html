@@ -1,0 +1,22 @@
+{% extends "./base.html" %}
+
+{% block title %}{{ object.item.name }} - {{ object.title }}{% endblock %}
+
+{% block content %}
+<a href="http://127.0.0.1:8000/online/itemlist/" xmlns="http://www.w3.org/1999/html">&laquo;返回到相册列表</a>
+<p> <a href="http://127.0.0.1:8000/online/upload/">上传照片&raquo;</a></p>
+    <td><i><a href="http://127.0.0.1:8000/online/delete/">删除照片</a></i></td>
+<h2>图片列表</h2>
+    {% for photo in photos %}
+
+    <tr>
+        <img src="photo/5526.jpg" width="200" height="200" /><br>
+        <td><i>{{ photo.title }}</i></td>
+        <td><i><a href="http://127.0.0.1:8000/online/download/">下载</a></i></td>
+
+        <td>编号：{{ photo.id }}</td>
+    </tr>
+    {% endfor %}
+    <br>
+
+{% endblock %}

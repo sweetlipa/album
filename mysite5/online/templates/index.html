@@ -1,0 +1,24 @@
+{% extends "./base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block content %}
+<p>{{username}},您好! 欢迎使用网络相册!!!</p>
+
+<h3>功能列表</h3>
+<table>
+    <tr>
+    {% for item in items %}
+        <td>
+            <a href=""><b>{{ item.name }}</b><br /></a>
+            <a ><b>{{ item.description }}</b><br /></a>
+        </td>
+    {% endfor %}
+    </tr>
+</table>
+<p><a href="http://127.0.0.1:8000/online/itemlist/">查看相册列表 &raquo;</a></p>
+   <p> <a href="http://127.0.0.1:8000/online/newitem/">新建相册&raquo;</a></p>
+   <p> <a href="http://127.0.0.1:8000/online/logout/">退出&raquo;</a></p>
+{% endblock %}
+
+<!--   index.html     -->

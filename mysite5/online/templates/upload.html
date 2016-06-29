@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+</head>
+<style type="text/css">
+            body { margin: 30px; font-family: Microsoft Yahei,sans-serif; background: #fff; }
+            h1 { background: #6E94A3; padding: 20px; color:#fefefe; }
+            h2 { background: #ddf; padding: 10px 20px; }
+            h3 { background: #D7E8F0; padding: 5px 20px; }
+            p { padding: 5px 20px; }
+            table { width: 100%; }
+            table th { text-align: left; }
+        </style>
+<body>
+<h1>请选择照片并提交</h1>
+<form method="post" enctype="multipart/form-data" >
+    {{ pf.as_p }}
+<input type="submit" value="提交"/>
+</form>
+<a href="http://127.0.0.1:8000/online/photolist/">返回相册</a>
+</body>
+</html>
+<!-- upload.html-->
